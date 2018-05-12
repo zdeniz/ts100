@@ -53,15 +53,16 @@ LDSCRIPT=LinkerScript.ld
 # ------------------------------------------------------------------------------
 COMPILER=gcc
 # programs ---------------------------------------------------------------------
-CC=arm-none-eabi-gcc
-CPP=arm-none-eabi-g++
-AS=arm-none-eabi-as
-GCOV=arm-none-eabi-gcov
-OBJCOPY=arm-none-eabi-objcopy
-OBJDUMP=arm-none-eabi-objdump
-SIZE=arm-none-eabi-size
-SREC=srec_cat
-SREC_INFO=srec_info
+BINPATH = 	/usr/local/gcc-arm-none-eabi-7-2017-q4/bin
+CC=			$(BINPATH)/arm-none-eabi-gcc
+CPP=		$(BINPATH)/arm-none-eabi-g++
+AS=			$(BINPATH)/arm-none-eabi-as
+GCOV=		$(BINPATH)/arm-none-eabi-gcov
+OBJCOPY=	$(BINPATH)/arm-none-eabi-objcopy
+OBJDUMP=	$(BINPATH)/arm-none-eabi-objdump
+SIZE=		$(BINPATH)/arm-none-eabi-size
+SREC=		srec_cat
+SREC_INFO=	srec_info
 
 
 
@@ -185,7 +186,7 @@ all: $(OUT_HEXFILE).hex
 
 # Create hexfile
 %.hex : %.elf
-	$(SIZE) -x $^
+	$(SIZE) $^
 	$(OBJCOPY) $^ -O ihex $@
 
 $(OUT_HEXFILE).elf : $(OUT_OBJS) $(OUT_OBJS_CPP) $(OUT_OBJS_S) Makefile $(LDSCRIPT)
