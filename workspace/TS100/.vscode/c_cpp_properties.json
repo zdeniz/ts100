@@ -7,7 +7,14 @@
                 "/usr/local/include",
                 "${workspaceFolder}"
             ],
-            "defines": ["STM32F103T8Ux","STM32F1","STM32","USE_HAL_DRIVER","STM32F103xB","USE_RTOS_SYSTICK"],
+            "defines": [
+                "STM32F103T8Ux",
+                "STM32F1",
+                "STM32",
+                "USE_HAL_DRIVER",
+                "STM32F103xB",
+                "USE_RTOS_SYSTICK"
+            ],
             "intelliSenseMode": "clang-x64",
             "browse": {
                 "path": [
@@ -62,5 +69,5 @@
             "cppStandard": "c++17"
         }
     ],
-    "version": 3
+    "version": 4
 }

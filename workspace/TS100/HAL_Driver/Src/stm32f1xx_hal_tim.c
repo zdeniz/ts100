@@ -2,8 +2,6 @@
   ******************************************************************************
   * @file    stm32f1xx_hal_tim.c
   * @author  MCD Application Team
-  * @version V1.1.1
-  * @date    12-May-2017
   * @brief   TIM HAL module driver
   *          This file provides firmware functions to manage the following 
   *          functionalities of the Timer (TIM) peripheral:
@@ -4280,7 +4278,7 @@ uint32_t HAL_TIM_ReadCapturedValue(TIM_HandleTypeDef *htim, uint32_t Channel)
   */
 
 /**
-  * @brief  Period elapsed callback in non blocking mode
+  * @brief  Period elapsed callback in non blocking mode 
   * @param  htim : TIM handle
   * @retval None
   */

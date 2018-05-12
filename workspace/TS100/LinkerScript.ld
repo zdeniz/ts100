@@ -1,5 +1,3 @@
-
-
 /* Entry Point */
 ENTRY(Reset_Handler)
 
@@ -14,7 +12,6 @@ MEMORY
 {
   RAM (xrw)		: ORIGIN = 0x20000000, LENGTH = 20K
   ROM (rx)		: ORIGIN = 0x08004000, LENGTH = 46K
-  
 }
 /* ROM is normally 48K after the bootloader, however we allocate the last page for settings, and the second last one for display boot logo*/
 
